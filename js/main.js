@@ -13,7 +13,7 @@ fetch("https://fast-ravine-16741.herokuapp.com/api/posts" , {
         if (!info.error) {
             renderRow(info.posts)
         }else{
-            window.location.href = "/login.html"
+            window.location.href = "/register.html"
         }
     })
 
