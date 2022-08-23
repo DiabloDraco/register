@@ -99,3 +99,9 @@ elWrapper.addEventListener("click" , function (evt) {
         })
     }
 })
+
+let post = document.querySelector("#post")
+
+post.addEventListener("click" , function () {
+    window.location.href = "./post.html"
+})
