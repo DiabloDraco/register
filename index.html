@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Users-list</title>
+</head>
+<body class="bg-info container">
+    <div class="d-flex align-items-center justify-content-center my-5">
+        <h2 class="text-center fw-bolder text-warning">UsersList</h2>
+        <button id="logOut" class="btn btn-outline-danger ms-3">Log out</button>
+    </div>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Id</th>
+                <th scope="col">Body</th>
+            </tr>
+        </thead>
+        <tbody class="wrapper">
+        </tbody>
+    </table>
+    <template id="rowTemplate">
+        <tr>
+            <th class="num" scope="row">1</th>
+            <td class="name">Mark</td>
+            <td class="id">Otto</td>
+            <td class="mail">@mdo</td>
+        </tr>
+    </template>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
