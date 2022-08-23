@@ -9,9 +9,11 @@ fetch("https://fast-ravine-16741.herokuapp.com/api/posts" , {
     }
     })
     .then(data => data.json())
-    .then(info => {renderRow(info.posts)
-        if (info.error) {
-            window.location.href = "./login.html"
+    .then(info => {
+        if (!info.error) {
+            renderRow(info.posts)
+        }else{
+            window.location.href = "/login.html"
         }
     })
 
@@ -38,5 +40,5 @@ let elLogOut = document.querySelector("#logOut")
 
 elLogOut.addEventListener("click" , function () {
     localStorage.removeItem("key")
-    window.location.href = "./regisetr.html"
+    window.location.href = "./register.html"
 })
