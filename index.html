@@ -20,11 +20,34 @@
                 <th scope="col">Id</th>
                 <th scope="col">Body</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="wrapper">
         </tbody>
     </table>
+    
+    <!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title modal__title" id="staticBackdropLabel">
+						Edit post
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body modal__desc">
+                    <input class="edit-title form-control mb-3" type="text" placeholder="Title">
+                    <input class="edit-body form-control" type="text" placeholder="Body">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary edit-button" data-bs-dismiss="modal">Edit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
     <template id="rowTemplate">
         <tr class="rowcha">
             <th class="num" scope="row">1</th>
@@ -32,6 +55,7 @@
             <td class="id">Otto</td>
             <td class="mail">@mdo</td>
             <td><button class="btn btn-sm btn-outline-primary btn-remove">Remove</button></td>
+            <td><button type="button" class="btn btn-edit btn-outline-info more__info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button></td>
         </tr>
     </template>
     <script src="./js/bootstrap.js"></script>
