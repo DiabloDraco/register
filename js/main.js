@@ -30,7 +30,9 @@ function renderRow(array) {
         template.querySelector(".mail").textContent = array[i].body
         template.querySelector(".id").textContent = array[i]._id
         template.querySelector(".num").textContent = [i]
-        
+        template.querySelector(".btn-remove").dataset.removeId = array[i]._id
+        template.querySelector(".btn-remove").classList.add(`rem${array[i]._id}`)
+
         fragment.appendChild(template)
     }
     elWrapper.appendChild(fragment)
@@ -41,4 +43,15 @@ let elLogOut = document.querySelector("#logOut")
 elLogOut.addEventListener("click" , function () {
     localStorage.removeItem("key")
     window.location.href = "./register.html"
+})
+
+elWrapper.addEventListener("click" , function (evt) {
+    let removeObject = evt.target.dataset.removeId
+    if (removeObject) {
+        let removeEl = document.querySelector(`.rem${removeObject}`)
+
+        let element = removeEl.closest(".rowcha")
+
+        element.remove()
+    }
 })
